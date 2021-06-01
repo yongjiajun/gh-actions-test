@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+func henloWorld() {
+						fmt.Println("henlo world")
+}
+
 func main() {
-				fmt.Println("henlo world")
+				henloWorld()
+		henloWorld()
+	helloWorld()
 }
