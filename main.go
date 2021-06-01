@@ -9,5 +9,4 @@ func henloWorld() {
 func main() {
 				henloWorld()
 		henloWorld()
-	helloWorld()
 }
