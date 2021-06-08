@@ -1,0 +1,11 @@
+name-template: "Dude Release "
+tag-template: "dude-"
+categories:
+  - title: "a"
+  - title: "b"
+  - title: "c"
+  - title: "d"
+template: |
+  yoooo
+  $CHANGES
+change-template: '- $TITLE (PR $URL)'
