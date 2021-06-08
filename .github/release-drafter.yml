@@ -6,6 +6,6 @@ categories:
   - title: "c"
   - title: "d"
 template: |
-  yoooo
+  yoooo $DATE
   $CHANGES
 change-template: '- $TITLE (PR $URL)'

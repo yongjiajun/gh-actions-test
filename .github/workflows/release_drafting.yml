@@ -11,7 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Update release draft
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       # Drafts the next release notes as develop is merged into master
       - uses: release-drafter/release-drafter@v5.15.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DATE: ${{ steps.date.outputs.date }}
