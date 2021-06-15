@@ -5,6 +5,7 @@ categories:
   - title: "b"
   - title: "c"
   - title: "d"
+    label: "bug"
 template: |
   yoooo $DATE
   $CHANGES
