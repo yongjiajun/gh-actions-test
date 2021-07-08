@@ -1,8 +1,14 @@
-name: PR Label Check
+name: Check PR required labels and comment
 
-on: pull_request
+on:
+  pull_request:
+      types: [opened]
 
 jobs:
-  check_PR_label:
-  - name: PR Label Check and Comment
-    uses: yashhy/pr-label-check-and-comment-action@v1.0.1
+  check-pr-label-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yashhy/pr-label-check-and-comment-action@master
+        with:
+          required_labels: 'bug, invalid'
+          GITHUB_TOKEN: '${{secrets.GITHUB_TOKEN}}'
