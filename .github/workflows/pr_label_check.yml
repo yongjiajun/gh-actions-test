@@ -5,11 +5,11 @@ on:
     types: [opened, labeled, unlabeled, synchronize]
     
 jobs:
-  QA-check:
+  PR-label-check:
     if: github.base_ref == 'main'
     runs-on: ubuntu-latest
     steps:
-      - uses: danielchabr/pr-labels-checker@v3
+      - uses: danielchabr/pr-labels-checker@v3.0
         id: checkLabel
         with:
           hasSome: bug, documentation
@@ -18,7 +18,7 @@ jobs:
     if: github.base_ref == 'main'
     runs-on: ubuntu-latest
     steps:
-      - uses: danielchabr/pr-labels-checker@v3
+      - uses: danielchabr/pr-labels-checker@v3.0
         id: checkLabel
         with:
           hasNone: do not merge,blocked
