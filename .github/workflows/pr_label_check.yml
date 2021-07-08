@@ -1,8 +1,0 @@
-name: PR Label Check
-
-on: pull_request
-
-jobs:
-  check_PR_label:
-  - name: PR Label Check and Comment
-    uses: yashhy/pr-label-check-and-comment-action@v1.0.1
